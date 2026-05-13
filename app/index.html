@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        border: 1px solid black;
+      }
+
+      .form-input {
+        padding: 1rem;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://localhost:3000/api/anadir" method="POST">
+      <h1>Añadir mesa:</h1>
+      <div class="form-input">
+        <label class="label-input" for="">Tamaño:</label>
+        <input type="text" name="tamano_cm" />
+      </div>
+      <div class="form-input">
+        <label class="label-input" for="">Color:</label>
+        <input type="text" name="color" />
+      </div>
+      <div class="form-input">
+        <label class="label-input" for="">Material:</label>
+        <input type="text" name="material" />
+      </div>
+      <div class="form-input">
+        <label class="label-input" for="">Patas:</label>
+        <input type="text" name="patas" />
+      </div>
+      <button type="submit">añadir mesa</button>
+    </form>
+
+    <div>
+      <h1>Modificar color de las mesas:</h1>
+      <div class="form-input">
+        <label class="label-input" for="">Color:</label>
+        <input type="text" id="new-color" />
+      </div>
+      <button onclick="changeColor()">cambiar color</button>
+    </div>
+
+    <div>
+      <h1>Eliminar mesas según patas:</h1>
+      <div class="form-input">
+        <label class="label-input" for="">Patas:</label>
+        <input type="text" id="patas" />
+      </div>
+      <button onclick="eraseTables()">eliminar</button>
+    </div>
+
+    <button onclick="showTables()">ver mesas</button>
+    <section id="availables-tables"></section>
+    <script src="index.js"></script>
+  </body>
+</html>
